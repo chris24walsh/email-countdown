@@ -25,7 +25,7 @@ EOF
 		
 		#if last day of countdown, delete job
 
-		if [ "$startdate" == "$enddate" ]
+		if [ "$sd" -gt "$ed" ]
 		then
 			rm -f "$i"
 		fi
