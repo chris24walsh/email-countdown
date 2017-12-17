@@ -20,7 +20,7 @@ do
 
 		/sbin/sendmail "$email" << EOF
 Subject: $message
-You have $diffDays days left
+You have $diffDays days left until $enddate
 EOF
 		
 		#if last day of countdown, delete job
