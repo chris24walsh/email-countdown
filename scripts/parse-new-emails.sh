@@ -16,6 +16,7 @@ do
 		rm -f "$i"
 		/sbin/sendmail "$email" << EOF
 Subject: Reminder set: $message
+You will be reminded each day at 8am, until $enddate.
 Thanks for using email-countdown!
 EOF
 	fi
