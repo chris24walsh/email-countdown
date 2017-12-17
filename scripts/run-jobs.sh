@@ -18,7 +18,7 @@ do
 		diffSeconds=$(($ed-$sd))
 		diffDays=$(($diffSeconds/86400))
 
-		/sbin/sendmail "$email" << EOF
+		/sbin/sendmail -F "Reminder Bot" "$email" << EOF
 Subject: $message
 You have $diffDays days left until $enddate
 EOF

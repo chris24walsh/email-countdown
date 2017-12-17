@@ -18,7 +18,7 @@ do
 		echo "Start Date: $startdate" >> "$jobfile"
 		echo "End Date: $enddate" >> "$jobfile"
 		rm -f "$i"
-		/sbin/sendmail "$email" << EOF
+		/sbin/sendmail -F "Reminder Bot" "$email" << EOF
 Subject: Reminder set: $message
 You will be reminded each day at 8am, until $enddate.
 Thanks for using email-countdown!
